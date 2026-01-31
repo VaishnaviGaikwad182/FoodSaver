@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FoodSaver | Reduce Food Wastage</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+  </head>
+
+  <body>
+    <nav class="navbar">
+  <a href="index.html" class="logo">
+    <img src="images/logo.png" alt="FoodSaver Logo" />
+    <span>FoodSaver</span>
+  </a>
+
+  <div class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="index.html#how">How It Works</a>
+    <a href="index.html#impact">Impact</a>
+  </div>
+
+  <div class="auth-section" id="authSection"></div>
+  <div class="hamburger" id="hamburger">&#9776;</div>
+</nav>
+
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content reveal">
+        <span class="hero-tag">Reducing Food Waste • Creating Impact</span>
+        <h1>Good food is the<br /><span>foundation of dignity</span></h1>
+        <p>
+          We connect restaurants, hotels, and event organizers with NGOs and
+          volunteers to reduce food wastage responsibly.
+        </p>
+
+        <div class="hero-actions">
+          <a href="register.html" class="hero-btn">Get Started</a>
+          <a href="#how" class="hero-secondary">Learn More</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURE CARDS -->
+    <section class="feature-cards">
+      <div class="card reveal">
+        <h3>Healthy Impact</h3>
+        <p>Fresh food reaches people before it expires.</p>
+      </div>
+      <div class="card reveal">
+        <h3>Smart Matching</h3>
+        <p>Nearby NGOs get notified instantly.</p>
+      </div>
+      <div class="card reveal">
+        <h3>Safe Distribution</h3>
+        <p>Verified providers and collectors.</p>
+      </div>
+      <div class="card reveal">
+        <h3>Community Driven</h3>
+        <p>Powered by volunteers and NGOs.</p>
+      </div>
+    </section>
+
+    <!-- SPLIT SECTION -->
+    <section id="impact" class="split-section">
+      <div class="image reveal">
+        <img
+          src="https://images.unsplash.com/photo-1593113598332-cd288d649433"
+          alt="Food distribution"
+        />
+      </div>
+      <div class="text reveal">
+        <h2>We’ve helped thousands of meals reach people</h2>
+        <p>
+          FoodSaver empowers organizations to respond quickly to surplus food
+          opportunities, minimize unnecessary waste, and ensure that safe,
+          nutritious meals are efficiently delivered to communities and
+          individuals who need them the most.
+        </p>
+        <div class="stats">
+          <div>
+            <h3>30k+</h3>
+            <p>Meals Saved</p>
+          </div>
+          <div>
+            <h3>2k</h3>
+            <p>Food Listings</p>
+          </div>
+          <div>
+            <h3>15</h3>
+            <p>NGOs</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTENT BLOCKS -->
+    <section id="how" class="content-blocks">
+      <div class="block reveal">
+        <h3>For Food Providers</h3>
+        <p>Post surplus food in seconds and ensure it doesn’t go to waste.</p>
+        <a href="register.html" class="block-btn dark-btn">POST FOOD</a>
+      </div>
+      <div class="block dark reveal">
+        <h3>For NGOs & Volunteers</h3>
+        <p>Find nearby food listings and help distribute meals safely.</p>
+        <a href="register.html" class="block-btn white-btn">COLLECT FOOD</a>
+      </div>
+    </section>
+
+    <!-- TESTIMONIAL -->
+    <section class="testimonial reveal">
+      <img
+        src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91"
+        alt="Volunteer"
+      />
+      <blockquote>
+        “FoodSaver makes it incredibly easy to connect surplus food with people
+        who truly need it.”
+      </blockquote>
+      <h4>— Community Volunteer</h4>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>© 2026 FoodSaver | Built for Social Impact</footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const reveals = document.querySelectorAll(".reveal");
+
+        function revealOnScroll() {
+          const windowHeight = window.innerHeight;
+          reveals.forEach((el) => {
+            const elementTop = el.getBoundingClientRect().top;
+            const revealPoint = 100; 
+            if (elementTop < windowHeight - revealPoint) {
+              el.classList.add("active");
+            } else {
+              el.classList.remove("active"); 
+            }
+          });
+        }
+
+        window.addEventListener("scroll", revealOnScroll);
+        revealOnScroll(); 
+      });
+    </script>
+
+    <script src="js/navbar.js"></script>
+  </body>
+</html>
